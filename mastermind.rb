@@ -31,9 +31,7 @@ def user_input
 
     # convert string input into integer array
     player_in = player_in.each_char.map { |c| Integer(c) }
-    if player_in.length == 4
-      int_in = true
-    end
+    int_in = true if player_in.length == 4
   end
 end
 
