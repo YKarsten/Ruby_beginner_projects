@@ -1,3 +1,6 @@
+# To display colors more easily
+require 'colorize'
+
 # Computer generated code
 class ComputerCode
   attr_reader :code
@@ -35,26 +38,28 @@ def user_input
   end
 end
 
-def console_output(string)
-  puts string
-end
-
 def mastermind
   # Init game
   game = ComputerCode.new
   count = 0
 
-  console_output(string)
-  puts '
-  Welcome to my mastermind game. When everything works out you will see this printed to the console.
+  print "
+  Welcome to my mastermind game.
 
   To win mastermind you need to guess a secret code, the computer has randomly generated at the start of this session.
-  There are 6 colors/ numbers in 4 possible positions (1..4).
+  There are 6 colors/ numbers in 4 possible positions (1..4). \n",
+    '  1  '.colorize(:background => :white),
+    '  2  '.colorize(:background => :blue),
+    '  3  '.colorize(:background => :green),
+    '  4  '.colorize(:background => :yellow),
+    '  5  '.colorize(:background => :red),
+    '  6  '.colorize(:background => :magenta),
+  "\n 
   Once you make your guess the computer gives you some cryptic feedback.
   It tells you how many colors are in the correct position, but not which of the four,
   and it also tells you if there are correctly guessed colors in a wrong position.
   You have 12 turns to guess the correct position to win, otherwise the machine wins.
-  '
+  "
   # Game loop
   while count <= 12
 
