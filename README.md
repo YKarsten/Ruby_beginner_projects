@@ -54,9 +54,11 @@ key methods: method, class, instance variable, variable scope, if-else statement
 
 ### Dependencies
 
+colorize gem
+
 ### Installing
 
-none
+gem install colorize
 
 ### Executing program
 
@@ -82,3 +84,4 @@ Yannik Karsten
 
 Inspiration, code snippets, etc.
 * [awesome-readme](https://github.com/matiassingers/awesome-readme)
+* [colorize gem](https://github.com/fazibear/colorize)
